@@ -1,5 +1,6 @@
 :root {
     --white: invert(96%) sepia(52%) saturate(1%) hue-rotate(78deg) brightness(105%) contrast(101%);
+    --black: filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(308deg) brightness(98%) contrast(101%);
     --icon-height: 25px;
 }
 
@@ -17,6 +18,7 @@ body {
 .container {
     display:grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
     width: 70%;
     height: 100%;
     background-color: white;
@@ -27,6 +29,7 @@ div {
     border: 0.2px solid gray;
 }
 
+/* SIDEBAR */
 .sidebar {
     display: grid;
     grid-template-rows: 1fr 9fr;
@@ -117,28 +120,90 @@ div {
     height: var(--icon-height);
 }
 
+.icon-search {
+    background-image: url(/resources/magnify.svg);
+    height: var(--icon-height);
+    width: var(--icon-height);
+    filter: var(--black);
 
+}
+
+.icon-notification {
+    background-image: url(/resources/bell-ring-outline.svg);
+    height: var(--icon-height);
+    width: var(--icon-height);
+    filter: var(--black);
+}
+
+.profile {
+    display: grid;
+    height: 43px;
+    width: 43px;
+}
+
+.icon-profile-self {
+    background: url(/resources/profile.png);
+    border-radius: 50%;
+    background-size: 107%;
+}
+
+.profile-big {
+    display: grid;
+    height: 61px;
+    width: 61px;
+}
+
+
+/* HEADER */
 .header {
     display: grid;
     grid-column: 2;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .search {
     display: grid;
+    grid-row: 1;
     grid-column: span 2;
-    grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 4fr 0.5fr 0.5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-left: 1rem;
+}
+
+input {
+    width: 85%;
+    height: 1.5rem;
+    margin-right: auto;
+    background-color: #e2e8f0;
+    border-radius: 15px;
+    border: 0;
 }
 
 .introduction {
     display: grid;
     grid-template-columns: 1fr 6fr;
+    align-items: center;
+    padding-left: 2rem;
 }
 
 .intro-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
 }
+
+button {
+    background-color: #0284c7;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    padding: 0 25px;
+    border: 0;
+    height: 35px;
+}
+
 
 .content {
     display: grid;
