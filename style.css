@@ -18,7 +18,7 @@ body {
 .container {
     display:grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 150px auto;
     background-color: white;
     margin: auto;
     width: 80%;
@@ -83,10 +83,11 @@ body {
     display: grid;
     grid-row: 1;
     grid-column: span 2;
-    grid-template-columns: 0.5fr 4fr 0.5fr 0.5fr 1fr;
+    grid-template-columns: 75px 3fr 75px 75px 75px;
     align-items: center;
     justify-items: center;
     padding-left: 1rem;
+    padding-right: 2rem;
 }
 
 input {
@@ -100,9 +101,12 @@ input {
 
 .introduction {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 10fr;
     align-items: center;
+    gap: 1rem;
     padding-left: 2rem;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 .intro-links {
@@ -110,6 +114,8 @@ input {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
+    gap: 10px;
+    padding-right: 20px;
 }
 
 button {
@@ -117,9 +123,9 @@ button {
     color: white;
     border-radius: 20px;
     font-size: 1.1rem;
-    padding: 0 20px;
     border: 0;
     height: 30px;
+    width: 100px;
 }
 
 /* CONTENT - MAIN */
